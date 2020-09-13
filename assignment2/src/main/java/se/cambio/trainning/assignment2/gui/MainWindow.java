@@ -42,6 +42,7 @@ import javax.swing.table.TableColumn;
 import net.sourceforge.jdatepicker.impl.JDatePanelImpl;
 import net.sourceforge.jdatepicker.impl.JDatePickerImpl;
 import net.sourceforge.jdatepicker.impl.UtilDateModel;
+
 import se.cambio.trainning.assignment2.data.EmploymentStatus;
 import se.cambio.trainning.assignment2.data.Gender;
 import se.cambio.trainning.assignment2.data.PatientData;
@@ -683,8 +684,8 @@ public class MainWindow extends JFrame
   {
     Calendar calendar = Calendar.getInstance();
     calendar.setTime(date);
-    birthdayDatePicker.getModel().setDate(calendar.get(calendar.YEAR), calendar.get(calendar.MONTH),
-        calendar.get(calendar.DAY_OF_MONTH));
+    birthdayDatePicker.getModel()
+        .setDate(calendar.get(calendar.YEAR), calendar.get(calendar.MONTH), calendar.get(calendar.DAY_OF_MONTH));
     birthdayDatePicker.getModel().setSelected(true);
   }
 
@@ -765,52 +766,73 @@ public class MainWindow extends JFrame
 
   private void setupSearchPanel()
   {
-    searchPanel.add(getLblSearchName(), new GridBagConstraints(0, 0, 1, 1, 0, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 2), 0, 0));
-    searchPanel.add(getTxtSearchName(), new GridBagConstraints(1, 0, 1, 1, 1, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.HORIZONTAL, new Insets(5, 0, 5, 5), 0, 0));
-    searchPanel.add(getLblBirthYear(), new GridBagConstraints(2, 0, 1, 1, 0, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 2), 0, 0));
-    searchPanel.add(getTxtBirthYear(), new GridBagConstraints(3, 0, 1, 1, 1, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.HORIZONTAL, new Insets(5, 0, 5, 0), 0, 0));
-    searchPanel.add(getChckbxFemale(), new GridBagConstraints(4, 0, 1, 1, 0, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.EAST, new Insets(5, 5, 5, 0), 0, 0));
-    searchPanel.add(getChckbxMale(), new GridBagConstraints(5, 0, 1, 1, 0, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.EAST, new Insets(5, 0, 5, 0), 0, 0));
-    searchPanel.add(getBtnSearch(), new GridBagConstraints(6, 0, 1, 1, 0, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.EAST, new Insets(5, 5, 5, 5), 0, 0));
+    searchPanel.add(getLblSearchName(),
+        new GridBagConstraints(0, 0, 1, 1, 0, 1, GridBagConstraints.NORTH, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 2), 0, 0));
+    searchPanel.add(getTxtSearchName(),
+        new GridBagConstraints(1, 0, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+            new Insets(5, 0, 5, 5), 0, 0));
+    searchPanel.add(getLblBirthYear(),
+        new GridBagConstraints(2, 0, 1, 1, 0, 1, GridBagConstraints.NORTH, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 2), 0, 0));
+    searchPanel.add(getTxtBirthYear(),
+        new GridBagConstraints(3, 0, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+            new Insets(5, 0, 5, 0), 0, 0));
+    searchPanel.add(getChckbxFemale(),
+        new GridBagConstraints(4, 0, 1, 1, 0, 1, GridBagConstraints.NORTH, GridBagConstraints.EAST,
+            new Insets(5, 5, 5, 0), 0, 0));
+    searchPanel.add(getChckbxMale(),
+        new GridBagConstraints(5, 0, 1, 1, 0, 1, GridBagConstraints.NORTH, GridBagConstraints.EAST,
+            new Insets(5, 0, 5, 0), 0, 0));
+    searchPanel.add(getBtnSearch(),
+        new GridBagConstraints(6, 0, 1, 1, 0, 1, GridBagConstraints.NORTH, GridBagConstraints.EAST,
+            new Insets(5, 5, 5, 5), 0, 0));
   }
 
   private void setupInputPanel()
   {
-    inputPanel.add(getLblName(), new GridBagConstraints(0, 0, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getTxtName(), new GridBagConstraints(1, 0, 2, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.HORIZONTAL, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getLblPhoneNumber(), new GridBagConstraints(0, 1, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getTxtPhone(), new GridBagConstraints(1, 1, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.HORIZONTAL, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getLblBirthday(), new GridBagConstraints(0, 2, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getDatePicker(), new GridBagConstraints(1, 2, 1, 1, 0, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getLblGender(), new GridBagConstraints(0, 3, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getGenderPanel(), new GridBagConstraints(1, 3, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-    inputPanel.add(getGenderPanel(), new GridBagConstraints(1, 3, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-    inputPanel.add(getLblAddress(), new GridBagConstraints(0, 4, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getScrollPane1(), new GridBagConstraints(1, 4, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.BOTH, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getLblEmploymentStatus(), new GridBagConstraints(0, 5, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getCmbEmpStatus(), new GridBagConstraints(1, 5, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    inputPanel.add(getButtonPanel(), new GridBagConstraints(1, 6, 1, 1, 1, 1, GridBagConstraints.EAST,
-        GridBagConstraints.EAST, new Insets(0, 5, 5, 5), 0, 0));
+    inputPanel.add(getLblName(),
+        new GridBagConstraints(0, 0, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getTxtName(),
+        new GridBagConstraints(1, 0, 2, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getLblPhoneNumber(),
+        new GridBagConstraints(0, 1, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getTxtPhone(),
+        new GridBagConstraints(1, 1, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getLblBirthday(),
+        new GridBagConstraints(0, 2, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getDatePicker(),
+        new GridBagConstraints(1, 2, 1, 1, 0, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getLblGender(),
+        new GridBagConstraints(0, 3, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getGenderPanel(),
+        new GridBagConstraints(1, 3, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.BOTH,
+            new Insets(0, 0, 0, 0), 0, 0));
+    inputPanel.add(getGenderPanel(),
+        new GridBagConstraints(1, 3, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.BOTH,
+            new Insets(0, 0, 0, 0), 0, 0));
+    inputPanel.add(getLblAddress(),
+        new GridBagConstraints(0, 4, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getScrollPane1(),
+        new GridBagConstraints(1, 4, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.BOTH,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getLblEmploymentStatus(),
+        new GridBagConstraints(0, 5, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getCmbEmpStatus(),
+        new GridBagConstraints(1, 5, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    inputPanel.add(getButtonPanel(),
+        new GridBagConstraints(1, 6, 1, 1, 1, 1, GridBagConstraints.EAST, GridBagConstraints.EAST,
+            new Insets(0, 5, 5, 5), 0, 0));
 
     Component[] s = inputPanel.getComponents();
     for (Component component : s)
@@ -838,36 +860,45 @@ public class MainWindow extends JFrame
   private void setupMainPanel()
   {
     mainPanel.add(getTxtRow());
-    mainPanel.add(getInputPanel(), new GridBagConstraints(0, 0, 1, 1, 1, 0, GridBagConstraints.NORTH,
-        GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-    mainPanel.add(getSearchPanel(), new GridBagConstraints(0, 1, 1, 1, 1, 0, GridBagConstraints.SOUTH,
-        GridBagConstraints.BOTH, new Insets(10, 0, 0, 0), 0, 0));
-    mainPanel.add(getTableGridPanel(), new GridBagConstraints(0, 2, 1, 1, 1, 1, GridBagConstraints.SOUTH,
-        GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-    mainPanel.add(getBtnClose(), new GridBagConstraints(0, 3, 1, 1, 0, 0, GridBagConstraints.EAST,
-        GridBagConstraints.EAST, new Insets(10, 0, 10, 5), 0, 0));
+    mainPanel.add(getInputPanel(),
+        new GridBagConstraints(0, 0, 1, 1, 1, 0, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+            new Insets(0, 0, 0, 0), 0, 0));
+    mainPanel.add(getSearchPanel(),
+        new GridBagConstraints(0, 1, 1, 1, 1, 0, GridBagConstraints.SOUTH, GridBagConstraints.BOTH,
+            new Insets(10, 0, 0, 0), 0, 0));
+    mainPanel.add(getTableGridPanel(),
+        new GridBagConstraints(0, 2, 1, 1, 1, 1, GridBagConstraints.SOUTH, GridBagConstraints.BOTH,
+            new Insets(0, 0, 0, 0), 0, 0));
+    mainPanel.add(getBtnClose(),
+        new GridBagConstraints(0, 3, 1, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.EAST,
+            new Insets(10, 0, 10, 5), 0, 0));
   }
 
   private void setupButtonPanel()
   {
-    buttonPanel.add(getBtnClear(), new GridBagConstraints(0, 0, 1, 1, 0, 1, GridBagConstraints.EAST,
-        GridBagConstraints.EAST, new Insets(0, 5, 5, 5), 0, 0));
-    buttonPanel.add(getBtnSave(), new GridBagConstraints(1, 0, 1, 1, 0, 1, GridBagConstraints.EAST,
-        GridBagConstraints.EAST, new Insets(0, 5, 5, 0), 0, 0));
+    buttonPanel.add(getBtnClear(),
+        new GridBagConstraints(0, 0, 1, 1, 0, 1, GridBagConstraints.EAST, GridBagConstraints.EAST,
+            new Insets(0, 5, 5, 5), 0, 0));
+    buttonPanel.add(getBtnSave(),
+        new GridBagConstraints(1, 0, 1, 1, 0, 1, GridBagConstraints.EAST, GridBagConstraints.EAST,
+            new Insets(0, 5, 5, 0), 0, 0));
   }
 
   private void setupGenderPanel()
   {
-    genderPanel.add(getRdbtnFemale(), new GridBagConstraints(0, 0, 1, 1, 0, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 5, 5, 5), 0, 0));
-    genderPanel.add(getRdbtnMale(), new GridBagConstraints(1, 0, 1, 1, 1, 1, GridBagConstraints.WEST,
-        GridBagConstraints.WEST, new Insets(5, 0, 5, 5), 0, 0));
+    genderPanel.add(getRdbtnFemale(),
+        new GridBagConstraints(0, 0, 1, 1, 0, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 5, 5, 5), 0, 0));
+    genderPanel.add(getRdbtnMale(),
+        new GridBagConstraints(1, 0, 1, 1, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST,
+            new Insets(5, 0, 5, 5), 0, 0));
   }
 
   private void setupTableGridPanel()
   {
-    gridPanel.add(getScrollPane(), new GridBagConstraints(0, 0, 1, 1, 1, 1, GridBagConstraints.NORTH,
-        GridBagConstraints.BOTH, new Insets(5, 5, 5, 5), 0, 0));
+    gridPanel.add(getScrollPane(),
+        new GridBagConstraints(0, 0, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+            new Insets(5, 5, 5, 5), 0, 0));
   }
 
   private void addDataTableListners()

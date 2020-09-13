@@ -1,41 +1,53 @@
 package se.cambio.trainning.assignment2.data;
 
-public class SearchCriteria {
-	private String name;
-	private int birthYear;
-	private boolean includeMale;
-	private boolean includeFemale;
+public class SearchCriteria
+{
+  private String name;
 
-	public String getName() {
-		return name;
-	}
+  private int birthYear;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  private boolean includeMale;
 
-	public int getBirthYear() {
-		return birthYear;
-	}
+  private boolean includeFemale;
 
-	public void setBirthYear(int birthYear) {
-		this.birthYear = birthYear;
-	}
+  public String getName()
+  {
+    return name;
+  }
 
-	public boolean isIncludeMale() {
-		return includeMale;
-	}
+  public void setName(String name)
+  {
+    this.name = name;
+  }
 
-	public void setIncludeMale(boolean includeMale) {
-		this.includeMale = includeMale;
-	}
+  public int getBirthYear()
+  {
+    return birthYear;
+  }
 
-	public boolean isIncludeFemale() {
-		return includeFemale;
-	}
+  public void setBirthYear(int birthYear)
+  {
+    this.birthYear = birthYear;
+  }
 
-	public void setIncludeFemale(boolean includeFemale) {
-		this.includeFemale = includeFemale;
-	}
+  public boolean isIncludeMale()
+  {
+    return includeMale;
+  }
+
+  public void setIncludeMale(boolean includeMale)
+  {
+    this.includeMale = includeMale;
+  }
+
+  public boolean isIncludeFemale()
+  {
+    return includeFemale;
+  }
+
+  public void setIncludeFemale(boolean includeFemale)
+  {
+    this.includeFemale = includeFemale;
+  }
 
 }

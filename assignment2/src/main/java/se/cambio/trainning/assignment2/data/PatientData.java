@@ -4,94 +4,120 @@ import java.util.Date;
 
 import se.cambio.trainning.assignment2.util.AgeCalculatorUtil;
 
-public class PatientData {
-	private int id;
-	private String name;
-	private Date birthday;
-	private String age;
-	private String address;
-	private Gender gender;
-	private String telephoneNumber;
-	private EmploymentStatus employmentStatus;
+public class PatientData
+{
+  private int id;
 
-	public PatientData() {
-	}
+  private String name;
 
-	public PatientData(int id, String name, Date birthday, String address, Gender gender, String telephoneNumber,
-			EmploymentStatus employmentStatus) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.birthday = birthday;
-		this.address = address;
-		this.gender = gender;
-		this.telephoneNumber = telephoneNumber;
-		this.employmentStatus = employmentStatus;
-		this.age = AgeCalculatorUtil.calculateAgeAndGenerateFormattedString(birthday);
-	}
+  private Date birthday;
 
-	public String getName() {
-		return name;
-	}
+  private String age;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  private String address;
 
-	public Date getBirthday() {
-		return birthday;
-	}
+  private Gender gender;
 
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
+  private String telephoneNumber;
 
-	public String getAddress() {
-		return address;
-	}
+  private EmploymentStatus employmentStatus;
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+  public PatientData()
+  {
+  }
 
-	public Gender getGender() {
-		return gender;
-	}
+  public PatientData(int id, String name, Date birthday, String address, Gender gender, String telephoneNumber,
+                     EmploymentStatus employmentStatus)
+  {
+    super();
+    this.id = id;
+    this.name = name;
+    this.birthday = birthday;
+    this.address = address;
+    this.gender = gender;
+    this.telephoneNumber = telephoneNumber;
+    this.employmentStatus = employmentStatus;
+    this.age = AgeCalculatorUtil.calculateAgeAndGenerateFormattedString(birthday);
+  }
 
-	public void setGender(Gender gender) {
-		this.gender = gender;
-	}
+  public String getName()
+  {
+    return name;
+  }
 
-	public String getTelephoneNumber() {
-		return telephoneNumber;
-	}
+  public void setName(String name)
+  {
+    this.name = name;
+  }
 
-	public void setTelephoneNumber(String telephoneNumber) {
-		this.telephoneNumber = telephoneNumber;
-	}
+  public Date getBirthday()
+  {
+    return birthday;
+  }
 
-	public EmploymentStatus getEmploymentStatus() {
-		return employmentStatus;
-	}
+  public void setBirthday(Date birthday)
+  {
+    this.birthday = birthday;
+  }
 
-	public void setEmploymentStatus(EmploymentStatus employmentStatus) {
-		this.employmentStatus = employmentStatus;
-	}
+  public String getAddress()
+  {
+    return address;
+  }
 
-	public String getAge() {
-		return age;
-	}
+  public void setAddress(String address)
+  {
+    this.address = address;
+  }
 
-	public int getId() {
-		return id;
-	}
+  public Gender getGender()
+  {
+    return gender;
+  }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  public void setGender(Gender gender)
+  {
+    this.gender = gender;
+  }
 
-	public void setAge(String age) {
-		this.age = age;
-	}
+  public String getTelephoneNumber()
+  {
+    return telephoneNumber;
+  }
+
+  public void setTelephoneNumber(String telephoneNumber)
+  {
+    this.telephoneNumber = telephoneNumber;
+  }
+
+  public EmploymentStatus getEmploymentStatus()
+  {
+    return employmentStatus;
+  }
+
+  public void setEmploymentStatus(EmploymentStatus employmentStatus)
+  {
+    this.employmentStatus = employmentStatus;
+  }
+
+  public String getAge()
+  {
+    return age;
+  }
+
+  public int getId()
+  {
+    return id;
+  }
+
+  public void setId(int id)
+  {
+    this.id = id;
+  }
+
+  public void setAge(String age)
+  {
+    this.age = age;
+  }
 
 }
